@@ -7,15 +7,15 @@
  */
 declare(strict_types=1);
 
-namespace Magentix\SyliusMondialRelayPlugin\EventListener;
+namespace Titi60\SyliusMondialRelayPlugin\EventListener;
 
-use Magentix\SyliusMondialRelayPlugin\Repository\PickupRepository;
+use Titi60\SyliusMondialRelayPlugin\Repository\PickupRepository;
 use BitBag\SyliusShippingExportPlugin\Event\ExportShipmentEvent;
 use BitBag\SyliusShippingExportPlugin\Entity\ShippingExportInterface;
 use BitBag\SyliusShippingExportPlugin\Entity\ShippingGatewayInterface;
 use Sylius\Component\Core\Model\OrderInterface;
 use Sylius\Component\Shipping\Model\ShipmentInterface;
-use Magentix\SyliusPickupPlugin\Entity\Shipment;
+use Titi60\SyliusPickupPlugin\Entity\Shipment;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 

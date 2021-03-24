@@ -43,13 +43,13 @@ With over 40 million parcels delivered through its network of 6500 pick-up point
 ```bash
 $ composer require magentix/sylius-mondial-relay-plugin:^1.3.0
 ```
-    
+
 Add the plugins to the `config/bundles.php` file:
 
 ```php
 BitBag\SyliusShippingExportPlugin\BitBagSyliusShippingExportPlugin::class => ['all' => true],
-Magentix\SyliusPickupPlugin\MagentixSyliusPickupPlugin::class => ['all' => true],
-Magentix\SyliusMondialRelayPlugin\MagentixSyliusMondialRelayPlugin::class => ['all' => true],
+Titi60\SyliusPickupPlugin\MagentixSyliusPickupPlugin::class => ['all' => true],
+Titi60\SyliusMondialRelayPlugin\MagentixSyliusMondialRelayPlugin::class => ['all' => true],
 ```
 
 Add the plugin's config by creating the file `config/packages/magentix_sylius_mondial_relay_plugin.yaml` with the following content:
@@ -60,13 +60,13 @@ imports:
     - { resource: "@MagentixSyliusPickupPlugin/Resources/config/config.yml" }
     - { resource: "@MagentixSyliusMondialRelayPlugin/Resources/config/config.yml" }
 ```
-    
+
 Add the plugin's routing by creating the file `config/routes/magentix_sylius_mondial_relay_plugin.yaml` with the following content:
 
 ```yaml
 magentix_sylius_pickup_plugin:
     resource: "@MagentixSyliusPickupPlugin/Resources/config/routing.yml"
-    
+
 bitbag_shipping_export_plugin:
     resource: "@BitBagSyliusShippingExportPlugin/Resources/config/routing.yml"
     prefix: /admin
@@ -97,8 +97,8 @@ public function registerBundles()
     $bundles = [
         ...
         new \BitBag\SyliusShippingExportPlugin\BitBagSyliusShippingExportPlugin(),
-        new \Magentix\SyliusPickupPlugin\MagentixSyliusPickupPlugin(),
-        new \Magentix\SyliusMondialRelayPlugin\MagentixSyliusMondialRelayPlugin(),
+        new \Titi60\SyliusPickupPlugin\MagentixSyliusPickupPlugin(),
+        new \Titi60\SyliusMondialRelayPlugin\MagentixSyliusMondialRelayPlugin(),
     ];
 }
 ```
@@ -114,7 +114,7 @@ imports:
     - { resource: "@MagentixSyliusPickupPlugin/Resources/config/config.yml" }
     - { resource: "@MagentixSyliusMondialRelayPlugin/Resources/config/config.yml" }
 ```
-    
+
 Import routing in your `app/config/routing.yml` file:
 
 ```yaml
@@ -123,7 +123,7 @@ Import routing in your `app/config/routing.yml` file:
 
 magentix_sylius_pickup_plugin:
     resource: "@MagentixSyliusPickupPlugin/Resources/config/routing.yml"
-    
+
 bitbag_shipping_export_plugin:
     resource: "@BitBagSyliusShippingExportPlugin/Resources/config/routing.yml"
     prefix: /admin

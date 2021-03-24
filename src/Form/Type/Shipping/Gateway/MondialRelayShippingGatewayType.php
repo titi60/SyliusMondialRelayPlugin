@@ -7,7 +7,7 @@
  */
 declare(strict_types=1);
 
-namespace Magentix\SyliusMondialRelayPlugin\Form\Type\Shipping\Gateway;
+namespace Titi60\SyliusMondialRelayPlugin\Form\Type\Shipping\Gateway;
 
 use Symfony\Component\Intl\Intl;
 use Symfony\Component\Form\AbstractType;

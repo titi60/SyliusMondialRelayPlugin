@@ -7,7 +7,7 @@
  */
 declare(strict_types=1);
 
-namespace Magentix\SyliusMondialRelayPlugin;
+namespace Titi60\SyliusMondialRelayPlugin;
 
 use Sylius\Bundle\CoreBundle\Application\SyliusPluginTrait;
 use Symfony\Component\HttpKernel\Bundle\Bundle;

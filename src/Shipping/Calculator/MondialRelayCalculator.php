@@ -7,10 +7,10 @@
  */
 declare(strict_types=1);
 
-namespace Magentix\SyliusMondialRelayPlugin\Shipping\Calculator;
+namespace Titi60\SyliusMondialRelayPlugin\Shipping\Calculator;
 
-use Magentix\SyliusPickupPlugin\Shipping\Calculator\CalculatorInterface;
-use Magentix\SyliusMondialRelayPlugin\Repository\PickupRepository;
+use Titi60\SyliusPickupPlugin\Shipping\Calculator\CalculatorInterface;
+use Titi60\SyliusMondialRelayPlugin\Repository\PickupRepository;
 use BitBag\SyliusShippingExportPlugin\Repository\ShippingGatewayRepository;
 use Sylius\Component\Shipping\Model\ShipmentInterface;
 use Sylius\Component\Core\Model\AddressInterface;

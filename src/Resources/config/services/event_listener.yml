@@ -1,6 +1,6 @@
 services:
     magentix_sylius_mondial_relay_plugin.admin.shipping_export:
-      class: Magentix\SyliusMondialRelayPlugin\EventListener\MondialRelayShippingExportEventListener
+      class: Titi60\SyliusMondialRelayPlugin\EventListener\MondialRelayShippingExportEventListener
       arguments:
           - '@magentix_sylius_mondial_relay_plugin.repository.pickup'
           - '@doctrine.orm.entity_manager'
