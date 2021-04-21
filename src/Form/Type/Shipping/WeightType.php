@@ -35,11 +35,14 @@ final class WeightType extends AbstractType
                 $data = $event->getData();
                 if (isset($data['amount'])) {
                     $data['amount'] /= 100;
+                } else {
+                    $data['amount'] = 0;
                 }
                 $form->add('amount', null, [
                     'label' => 'mondial_relay.form.shipping_method.amount',
                     'data' => $data['amount'],
                 ]);
+
             })
             ->addEventListener(FormEvents::SUBMIT, function (FormEvent $event) use ($options): void {
                 $eventData = $event->getData();
