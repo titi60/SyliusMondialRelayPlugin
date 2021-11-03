@@ -1,2 +1,2 @@
 imports:
-    - { resource: "@Titi60SyliusMondialRelayPlugin/Resources/config/services.yml" }
+    - { resource: "@SyliusMondialRelayPlugin/Resources/config/services.yml" }
