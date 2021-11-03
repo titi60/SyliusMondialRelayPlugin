@@ -5,7 +5,7 @@ services:
           - '@magentix_sylius_mondial_relay_plugin.repository.pickup'
           - '@doctrine.orm.entity_manager'
       tags:
-          - { name: kernel.event_listener, event: bitbag.export_shipment, method: exportShipment }
+        - { name: kernel.event_listener, event: 'bitbag.shipping_export.export_shipment', method: exportShipment }
 
     magentix_sylius_mondial_relay_plugin.admin.shipping_gateway.update.javascripts:
         class: Sylius\Bundle\UiBundle\Block\BlockEventListener
