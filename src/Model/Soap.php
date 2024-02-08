@@ -1,10 +1,12 @@
 <?php
+
 /**
  * @author    Matthieu Vion
  * @copyright 2018 Magentix
  * @license   https://opensource.org/licenses/GPL-3.0 GNU General Public License version 3
  * @link      https://github.com/magentix/mondial-relay-plugin
  */
+
 declare(strict_types=1);
 
 namespace Titi60\SyliusMondialRelayPlugin\Model;
@@ -67,7 +69,23 @@ class Soap
     protected function getClient(array $config): SoapClient
     {
         if ($this->client === null) {
-            $this->client = new SoapClient($config['api_wsdl'], ['exceptions' => true, 'trace' => false]);
+            $this->client = new SoapClient(
+                $config['api_wsdl'],
+                [
+                    'exceptions' => true,
+                    'trace' => false,
+                    'stream_context' => stream_context_create(
+                        [
+                            'ssl' =>
+                            [
+                                'verify_peer' => false,
+                                'verify_peer_name' => false,
+                                'allow_self_signed' => true
+                            ]
+                        ]
+                    )
+                ]
+            );
         }
 
         return $this->client;
